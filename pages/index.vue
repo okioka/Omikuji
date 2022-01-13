@@ -7,7 +7,8 @@
       <strong class="has-text-white">抽選</strong>
     </button>
 
-    // ここで結果を表示する
+    <!-- ここで結果を表示する -->
+
 
   </section>
 </template>
