@@ -1,14 +1,13 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
-      <h1 class="title" style="color:gray">おみくじ</h1>
+      <h1 class="column title" style="color:gray">おみくじ</h1>
+      <button class="button is-primary" @click="lottery()">
+        <strong class="has-text-white">抽選</strong>
+      </button>
     </div>
-    <button class="button is-primary" @click="lottery()">
-      <strong class="has-text-white">抽選</strong>
-    </button>
 
     <!-- ここで結果を表示する -->
-
 
   </section>
 </template>
@@ -17,12 +16,13 @@
   export default {
     data(){
       return {
-        result: []
+        results: []
       }
     },
     methods: {
       lottery() {
-        this.result.push({
+        this.results.unshift({
+          'id': this.results.length,
           'fortune': this.fortune_lottery(), //運勢
           'wish': this.others_lottery(), //願事
           'love': this.others_lottery(), //恋愛
