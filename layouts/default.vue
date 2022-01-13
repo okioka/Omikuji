@@ -10,11 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          Vue.js/Nuxt.jsハンズオン
         </a>
 
         <div class="navbar-burger">
@@ -28,7 +24,7 @@
     <section class="main-content columns">
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">
-          General
+          メニュー
         </p>
         <ul class="menu-list">
           <li
@@ -59,12 +55,12 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
+          title: 'ホーム',
           icon: 'home',
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
+          title: '概要',
           icon: 'lightbulb',
           to: { name: 'inspire' }
         }
