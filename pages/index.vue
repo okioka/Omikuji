@@ -2,7 +2,7 @@
   <section class="section">
     <div class="columns is-mobile">
       <h1 class="column title" style="color:gray">おみくじ</h1>
-      <button class="button is-primary" @click="lottery()">
+      <button class="button is-primary">
         <strong class="has-text-white">抽選</strong>
       </button>
     </div>
