@@ -34,20 +34,22 @@
       fortune_lottery() {
         const result = Math.round( Math.random()*100 ) % 6;
         switch(result) {
-          case 0: return "大吉";
-          case 1: return "中吉";
-          case 2: return "小吉";
-          case 3: return "吉";
-          case 4: return "凶";
-          case 5: return "大凶"
+          case 0:  return "大吉";
+          case 1:  return "中吉";
+          case 2:  return "小吉";
+          case 3:  return "吉";
+          case 4:  return "凶";
+          case 5:  return "大凶"
+          default: return "抽選失敗";
         }
       },
       // その他抽選
       others_lottery() {
         const result = Math.round( Math.random()*100 ) % 2;
         switch(result) {
-          case 0: return "良";
-          case 1: return "悪";
+          case 0:  return "良";
+          case 1:  return "悪";
+          default: return "抽選失敗";
         }
       }
     }
