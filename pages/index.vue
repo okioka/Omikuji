@@ -2,12 +2,23 @@
   <section class="section">
     <div class="columns is-mobile">
       <h1 class="column title" style="color:gray">おみくじ</h1>
-      <button class="button is-primary">
+      <button class="button is-primary" @click="lottery()">
         <strong class="has-text-white">抽選</strong>
       </button>
     </div>
 
-    <!-- ここで結果を表示する -->
+    <div v-if="isLottery">
+    <h2>結果</h2>
+    <div class="card mt-3 pb-3" v-for="result in results" :key="result.id">
+      <div class="content p-4">
+        <p class="title">運勢 : {{ result.fortune }}</p>
+        <p>願事 : {{ result.wish }}</p>
+        <p>恋愛 : {{ result.love }}</p>
+        <p>仕事 : {{ result.business }}</p>
+        <p>待人 : {{ result.waiter }}</p>
+      </div>
+    </div>
+  </div>
 
   </section>
 </template>
@@ -16,7 +27,8 @@
   export default {
     data(){
       return {
-        results: []
+        results: [],
+        isLottery: false
       }
     },
     methods: {
@@ -29,6 +41,7 @@
           'business': this.others_lottery(), // 仕事
           'waiter': this.others_lottery(), // 待人
         })
+        this.isLottery = true
       },
       // 運勢抽選
       fortune_lottery() {
